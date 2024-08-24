@@ -1,38 +1,70 @@
+/* General body styles */
+body.light {
+  background-color: #fff;
+  color: #000;
+}
+
+body.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Container for the app */
 .App {
-  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Button for theme toggle */
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* List items for quiz options */
+.option {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Light theme styles */
+.light-theme .option {
+  background-color: white;
+  color: black;
+}
+
+.light-theme .option.correct {
+  background-color: lightgreen; /* Light green for correct answers */
+}
+
+.light-theme .option.incorrect {
+  background-color: lightcoral; /* Light red for incorrect answers */
+}
+
+/* Dark theme styles */
+.dark-theme .option {
+  background-color: #333; /* Dark background for options */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dark-theme .option.correct {
+  background-color: #2e8b57; /* Darker green for correct answers */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark-theme .option.incorrect {
+  background-color: #b22222; /* Darker red for incorrect answers */
+}
+
+/* Hover effect for options */
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+.dark-theme .option:hover {
+  background-color: #555; /* Darker hover effect for dark theme */
 }
